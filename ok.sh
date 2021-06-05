@@ -8,4 +8,18 @@ startbbr(){
   lsmod | grep bbr
 
   
-  
+菜单 
+menu() {
+	
+	echo "1.启动BBR"
+	
+	
+	read -r -p "请选择:" selectInstallType
+	case ${selectInstallType} in
+	1)
+		startbbr
+		;;
+		esac
+}
+
+menu
