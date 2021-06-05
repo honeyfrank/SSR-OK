@@ -6,7 +6,7 @@ startbbr(){
 	sysctl -p
 	echo "BBR启动"
   lsmod | grep bbr
-
+}
   
 #菜单 
 menu() {
