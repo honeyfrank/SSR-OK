@@ -63,11 +63,11 @@ menu() {
 		nginx
 		;;
 		*)
-	    clear
-	    echo "请输入正确数字 "
-	    sleep 5s
-	    smenu
-	     ;;
+	        clear
+	        echo "请输入正确数字 "
+	        sleep 5s
+	        menu
+	        ;;
        esac
 }
 
