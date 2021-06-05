@@ -62,7 +62,13 @@ menu() {
 		4)
 		nginx
 		;;
-	esac
+		*)
+	    clear
+	    echo "请输入正确数字 "
+	    sleep 5s
+	    smenu
+	     ;;
+       esac
 }
 
 menu
