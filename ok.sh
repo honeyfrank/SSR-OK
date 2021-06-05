@@ -41,6 +41,7 @@ menu() {
 	echo "5.卸载nginx"
 	echo "=============================================================="
 	read -r -p "请选择:" selectInstallType
+	do
 	case ${selectInstallType} in
 	1)
 		bbr
@@ -55,5 +56,6 @@ menu() {
 		nginx
 		;;
 	esac
+	done
 }
 menu
