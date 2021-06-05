@@ -40,21 +40,20 @@ menu() {
 	echo ""
 	echo "5.卸载nginx"
 	echo "=============================================================="
-	read -r -p "请选择数字:" selectInstallType
+	read -r -p "请选择:" selectInstallType
 	case ${selectInstallType} in
-	        1)
+	1)
 		bbr
 		;;
-		2)
+	2)
 		ssr
 		;;
-		3)
+	3)
 		transfer
 		;;
-		4)
+	4)
 		nginx
-		;;	
-       esac
+		;;
+	esac
 }
-
 menu
