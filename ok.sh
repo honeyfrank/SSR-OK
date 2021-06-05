@@ -29,29 +29,32 @@ menu() {
 	echo "=============================================================="
 	echo "1.启动BBR"
 	echo "当前拥塞控制算法为: ${net_congestion_control} 当前队列算法为: ${net_qdisc} "
-	echo ""
+	echo "---"
 	echo "2.安装shadowsocksR"
-	echo ""
+	echo "---"
 	echo "3.安装brook中转"
-	echo ""
+	echo "---"
 	echo "4.安装nginx伪装网站"	
-	echo ""
+	echo "---"
 	echo "5.卸载nginx"
 	echo "=============================================================="
 	echo && read -e -p "请输入数字 []：" num
         case "$num" in
-	        1)
-		bbr
-		;;
-	        2)
-		ssr
-		;;
-	        3)
-		transfer
-		;;
-	        4)
-		nginx
-		;;
-	esac
+	1)
+	bbr
+	;;
+	2)
+	ssr
+	;;
+	3)
+	transfer
+	;;
+	4)
+	nginx
+	;;
+	*)
+	echo -e "${Error} 请输入正确的数字 "
+	;;
+esac
 }
 menu
