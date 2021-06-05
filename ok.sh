@@ -40,8 +40,8 @@ menu() {
 	echo ""
 	echo "5.卸载nginx"
 	echo "=============================================================="
-	read -p " 请输入数字 :" num
-        case ${num} in
+	read -n "请输入数字" option
+        case $option in
 	        1)
 		bbr
 		;;
