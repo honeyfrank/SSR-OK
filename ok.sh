@@ -40,8 +40,6 @@ menu() {
 	echo ""
 	echo "5.卸载nginx"
 	echo "=============================================================="
-	mkdirTools
-	aliasInstall
 	read -r -p "请选择数字:" selectInstallType
 	case ${selectInstallType} in
 	        1)
