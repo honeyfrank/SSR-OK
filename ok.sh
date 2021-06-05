@@ -1,5 +1,5 @@
 #启用BBR
-startbbr(){
+startbbr() {
 	
 	echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
   echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
@@ -14,12 +14,12 @@ menu() {
 	echo "1.启动BBR"
 	
 	
-	read -r -p "请选择:" selectInstallType
-	case ${selectInstallType} in
+	read -p " 请输入数字 :" num
+        case "$num" in
 	1)
 		startbbr
 		;;
-		esac
+	esac
 }
 
 menu
