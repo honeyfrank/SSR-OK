@@ -8,7 +8,7 @@ startbbr(){
   lsmod | grep bbr
 
   
-菜单 
+#菜单 
 menu() {
 	
 	echo "1.启动BBR"
