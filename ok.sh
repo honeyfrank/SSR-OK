@@ -12,14 +12,24 @@ startbbr() {
 
 
 #安装nginx
-menu() {
+nginx() {
    
    sudo apt update
     sudo apt install nginx
 
    
 }
-  
+
+
+
+#中继转发
+transfer() {
+
+wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/brook-pf.sh && chmod +x brook-pf.sh && bash brook-pf.sh
+
+
+}
+
 #菜单 
 menu() {
 	net_congestion_control=`cat /proc/sys/net/ipv4/tcp_congestion_control | awk '{print $1}'`
@@ -30,16 +40,27 @@ menu() {
 	echo ""
 	echo "2.安装shadowsocksR"
 	echo ""
-	echo "3.安装nginx伪装网站"	
+	echo "3.安装brook中转"
 	echo ""
-	echo "4.卸载nginx"
+	echo "4.安装nginx伪装网站"	
+	echo ""
+	echo "5.卸载nginx"
 	echo "=============================================================="
 
 	
 	read -p " 请输入数字 :" num
         case "$num" in
-	1)
+	        1)
 		startbbr
+		;;
+		2)
+		ssr
+		;;
+		3)
+		transfer
+		;;
+		4)
+		nginx
 		;;
 	esac
 }
