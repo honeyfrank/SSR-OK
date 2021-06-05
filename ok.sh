@@ -52,9 +52,6 @@ menu() {
 	4)
 	nginx
 	;;
-	*)
-	echo -e "${Error} 请输入正确的数字 "
-	;;
 esac
 }
 menu
