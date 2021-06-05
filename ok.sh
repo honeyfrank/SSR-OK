@@ -12,9 +12,7 @@ bbr() {
 #安装nginx
 nginx() {
     sudo apt update
-    sudo apt install nginx
-
-   
+    sudo apt install nginx  
 }
 
 
@@ -42,16 +40,16 @@ menu() {
 	echo "=============================================================="
 	echo && read -e -p "请输入数字 []：" num
         case "$num" in
-	1)
+	        1)
 		bbr
 		;;
-	2)
+	        2)
 		ssr
 		;;
-	3)
+	        3)
 		transfer
 		;;
-	4)
+	        4)
 		nginx
 		;;
 	esac
