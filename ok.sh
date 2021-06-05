@@ -10,7 +10,8 @@ startbbr() {
   
 #菜单 
 menu() {
-	
+	net_congestion_control=`cat /proc/sys/net/ipv4/tcp_congestion_control | awk '{print $1}'`
+	net_qdisc=`cat /proc/sys/net/core/default_qdisc | awk '{print $1}'`
 	echo "1.启动BBR"
 	echo " 当前拥塞控制算法为: ${net_congestion_control} 当前队列算法为: ${net_qdisc} "
 	
