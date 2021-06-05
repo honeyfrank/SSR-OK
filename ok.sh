@@ -12,6 +12,7 @@ startbbr() {
 menu() {
 	
 	echo "1.启动BBR"
+	echo " 当前拥塞控制算法为: ${net_congestion_control} 当前队列算法为: ${net_qdisc} "
 	
 	
 	read -p " 请输入数字 :" num
