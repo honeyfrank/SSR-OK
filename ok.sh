@@ -1,5 +1,5 @@
 #启用BBR
-startbbr() {
+bbr() {
 	
 	echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
         echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
@@ -51,7 +51,7 @@ menu() {
 	read -p " 请输入数字 :" num
         case "$num" in
 	        1)
-		startbbr
+		bbr
 		;;
 		2)
 		ssr
