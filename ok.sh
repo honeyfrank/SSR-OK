@@ -40,9 +40,8 @@ menu() {
 	echo ""
 	echo "5.卸载nginx"
 	echo "=============================================================="
-	read -r -p "请选择:" selectInstallType
-	do
-	case ${selectInstallType} in
+	echo && read -e -p "请输入数字 []：" num
+        case "$num" in
 	1)
 		bbr
 		;;
@@ -56,6 +55,5 @@ menu() {
 		nginx
 		;;
 	esac
-	done
 }
 menu
