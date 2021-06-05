@@ -1,20 +1,17 @@
 #启用BBR
 bbr() {
-	
-	echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
+        echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
         echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
 	sysctl -p
 	lsmod | grep bbr
-	echo "BBR启动"
-  
+	echo "BBR启动"  
 }
 
 
 
 #安装nginx
 nginx() {
-   
-   sudo apt update
+    sudo apt update
     sudo apt install nginx
 
    
@@ -24,10 +21,7 @@ nginx() {
 
 #中继转发
 transfer() {
-
 wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/brook-pf.sh && chmod +x brook-pf.sh && bash brook-pf.sh
-
-
 }
 
 #菜单 
@@ -46,8 +40,6 @@ menu() {
 	echo ""
 	echo "5.卸载nginx"
 	echo "=============================================================="
-
-	
 	read -p " 请输入数字 :" num
         case ${num} in
 	        1)
@@ -61,8 +53,7 @@ menu() {
 		;;
 		4)
 		nginx
-		;;
-		
+		;;	
        esac
 }
 
