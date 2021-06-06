@@ -1,3 +1,7 @@
+#!/usr/bin/env bash
+
+
+
 #启用BBR
 bbr(){
         echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
