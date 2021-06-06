@@ -1,5 +1,5 @@
 #启用BBR
-bbr() {
+bbr(){
         echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
         echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
 	sysctl -p
@@ -10,7 +10,7 @@ bbr() {
 
 
 #安装nginx
-nginx() {
+nginx(){
     sudo apt update
     sudo apt install nginx  
 }
@@ -18,12 +18,13 @@ nginx() {
 
 
 #中继转发
-transfer() {
+transfer(){
 wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/brook-pf.sh && chmod +x brook-pf.sh && bash brook-pf.sh
 }
 
 #菜单 
-	net_congestion_control=`cat /proc/sys/net/ipv4/tcp_congestion_control | awk '{print $1}'`
+menu(){
+        net_congestion_control=`cat /proc/sys/net/ipv4/tcp_congestion_control | awk '{print $1}'`
 	net_qdisc=`cat /proc/sys/net/core/default_qdisc | awk '{print $1}'`
 	echo "=============================================================="
 	echo "1.启动BBR"
@@ -52,3 +53,5 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubiBack
 	nginx
 	;;
 esac
+}
+menu
