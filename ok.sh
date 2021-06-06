@@ -38,8 +38,8 @@ menu(){
 	echo "---"
 	echo "5.卸载nginx"
 	echo "=============================================================="
-	read -e -p "请输入数字 []：" num
-        case "$num" in
+	read -r -p "请选择:" selectInstallType
+	case ${selectInstallType} in
 	1)
 	bbr
 	;;
