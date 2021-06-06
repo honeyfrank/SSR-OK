@@ -35,7 +35,8 @@ menu(){
         clear
         net_congestion_control=`cat /proc/sys/net/ipv4/tcp_congestion_control | awk '{print $1}'`
 	net_qdisc=`cat /proc/sys/net/core/default_qdisc | awk '{print $1}'`
-	echo "=============================================================="
+	echo "==========================OK一键脚本=========================="
+	echo "============================================================="
 	echo "1.启动BBR"
 	echo "当前拥塞控制算法为: ${net_congestion_control} 当前队列算法为: ${net_qdisc} "
 	echo "---"
@@ -46,7 +47,7 @@ menu(){
 	echo "4.安装nginx伪装网站"	
 	echo "---"
 	echo "5.卸载nginx"
-	echo "=============================================================="
+	echo "============================================================="
 	read -r -p "请选择:" num
 	case ${num} in
 	1)
