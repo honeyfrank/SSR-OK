@@ -37,7 +37,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubiBack
 	echo "---"
 	echo "5.卸载nginx"
 	echo "=============================================================="
-	echo && read -e -p "请输入数字 []：" num
+	read -e -p "请输入数字 []：" num
         case "$num" in
 	1)
 	bbr
