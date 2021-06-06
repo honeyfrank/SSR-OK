@@ -8,7 +8,8 @@ bbrok(){
         echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
 	sysctl -p
 	lsmod | grep bbr
-	echo "BBR启动"  
+	echo "BBR启动 即将重启系统"  
+	reboot
 }
 
 
