@@ -3,7 +3,7 @@
 
 
 #启用BBR
-bbr-ok(){
+bbrok(){
         echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
         echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
 	sysctl -p
@@ -14,19 +14,19 @@ bbr-ok(){
 
 
 #安装nginx
-nginx-ok(){
+nginxok(){
     sudo apt update
     sudo apt install nginx  
 }
 
 #ssr
-ssr-ok(){
+ssrok(){
     wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/ssr.sh && chmod +x ssr.sh && bash ssr.sh
 
 }
 
 #中继转发
-transfer-ok(){
+transferok(){
 wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/brook-pf.sh && chmod +x brook-pf.sh && bash brook-pf.sh
 }
 
@@ -47,19 +47,19 @@ menu(){
 	echo "---"
 	echo "5.卸载nginx"
 	echo "=============================================================="
-	read -r -p "请选择:" selectInstallType
-	case ${selectInstallType} in
+	read -r -p "请选择:" num
+	case ${num} in
 	1)
-	bbr-ok
+	bbrok
 	;;
 	2)
-	ssr-ok
+	ssrok
 	;;
 	3)
-	transfer-ok
+	transferok
 	;;
 	4)
-	nginx-ok
+	nginxok
 	;;
 esac
 }
