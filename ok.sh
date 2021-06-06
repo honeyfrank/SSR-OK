@@ -49,8 +49,8 @@ menu(){
 	echo "---"
 	echo "5.卸载nginx"
 	echo "============================================================="
-	read -r -p "请选择:" num
-	case ${num} in
+	read -rp "请输入数字：" menu_num
+        case $menu_num in
 	1)
 	bbrok
 	;;
